@@ -1,7 +1,10 @@
 // var Flux = require('flux');
 
 import Form from './components/Form';
-import ArticleList from './components/ArticleList'
+import ArticleList from './components/ArticleList';
+import API from './API';
+
+API.getAllResources();
 
 class App extends React.Component {
   render() {

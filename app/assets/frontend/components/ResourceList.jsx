@@ -1,5 +1,5 @@
 import OneResource from './OneResource';
-import Resource from '../Resource';
+import ResourceStore from '../stores/ResourceStore';
 
 export default class ResourceList extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class ResourceList extends React.Component {
   }
   componentDidMount() {
     this.setState({
-      resources: Resource.fetchAll()
+      resources: ResourceStore.fetchAll()
     });
   }
   render() {
