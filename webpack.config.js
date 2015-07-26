@@ -8,12 +8,12 @@ module.exports = {
         filename: "bundle.js"
     },
     resolve: {
-      extensions: ['', '.jsx'],
+      extensions: ['', '.js', '.jsx'],
       path: __dirname
     },
     module: {
         loaders: [
-            { test: /\.jsx$/, loader: "babel-loader" }
+            { test: /\.jsx$/, exclude: /node_modules/, loader: "babel-loader" }
         ]
     }
 };
