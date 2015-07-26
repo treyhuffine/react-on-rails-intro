@@ -11,5 +11,15 @@ export default {
     .error(error => {
 
     })
+  },
+  postResource(data) {
+    console.log(data);
+    $.post("/articles", {article: data})
+    .success(newResource => {
+      ServerActionsCreator.addNewResource(newResource);
+    })
+    .error(error => {
+      console.log(error);
+    });
   }
 }
