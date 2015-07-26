@@ -1,26 +1,18 @@
-import OneResource from './OneResource'
+import OneResource from './OneResource';
+import Resource from '../Resource';
 
 export default class ResourceList extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      resources: [
-        {title: 'test1', link: ''},
-        {title: 'test2..', link: ''},
-        {title: 'test3...', link: ''},
-        {title: 'test4.......', link: ''}
-      ]
+      resources: []
     };
   }
   componentDidMount() {
-    $.get("/articles")
-    .success(data => {
-      this.setState({ resources: data });
-    })
-    .error(error => {
-      console.log(error);
-    })
+    this.setState({
+      resources: Resource.fetchAll()
+    });
   }
   render() {
     let resources = this.state.resources.map((resource, idx) => {
