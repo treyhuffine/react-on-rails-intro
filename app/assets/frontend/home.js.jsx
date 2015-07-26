@@ -1,6 +1,7 @@
 // var Flux = require('flux');
 
 import Form from './components/Form';
+import ArticleList from './components/ArticleList'
 
 class App extends React.Component {
   render() {
@@ -8,6 +9,7 @@ class App extends React.Component {
       <div className="formWrapper">
         <h3>Add an article:</h3>
         <Form />
+        <ArticleList />
       </div>
     );
   }
