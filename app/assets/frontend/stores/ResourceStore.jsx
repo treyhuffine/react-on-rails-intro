@@ -1,23 +1,14 @@
 import AppDispatcher from "../dispatcher";
 import Actions from "../constants";
+import AppEventEmitter from "./AppEventEmitter";
 
-import { EventEmitter } from "events";
+// import { EventEmitter } from "events";
 
 let _resources = [];
 
-class ResourceEventEmitter extends EventEmitter {
+class ResourceEventEmitter extends AppEventEmitter {
   getAll() {
     return _resources
-  }
-  emitChange() {
-    this.emit("CHANGE");
-    console.log("4. Change event emitted");
-  }
-  addChangeListener(cb) {
-    this.on("CHANGE", cb);
-  }
-  removeChangeListener(cb) {
-    this.removeListener("CHANGE", cb);
   }
 }
 
