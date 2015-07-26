@@ -23,12 +23,6 @@ AppDispatcher.register(action => {
       ResourceStore.emitChange();
       break;
 
-    case Actions.SUBMIT_RESOURCE:
-      console.log("submitting resource")
-      console.log(action);
-      API.postResource(action.resource);
-      break;
-
     case Actions.ADD_NEW_RESOURCE:
       console.log(action);
       _resources.push(action.resource);

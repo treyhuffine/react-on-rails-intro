@@ -1,15 +1,12 @@
-import ServerActionsCreator from "../actions/ServerActionsCreator";
+import ResourceActionsCreator from "../actions/ResourceActionsCreator";
 
 export default class Form extends React.Component {
   addResource(e) {
     e.preventDefault();
     console.log("adding", this.refs);
-    let newResource = {
-      author: this.refs.author.getDOMNode().value,
-      title: this.refs.title.getDOMNode().value,
-      link: this.refs.link.getDOMNode().value
-    };
-    ServerActionsCreator.submitResource(newResource);
+    let newResource = {};
+    Object.keys(this.refs).forEach(key => newResource[key] = this.refs[key].getDOMNode().value)
+    ResourceActionsCreator.submitResource(newResource);
     document.getElementById("resource-form").reset();
   }
   render() {

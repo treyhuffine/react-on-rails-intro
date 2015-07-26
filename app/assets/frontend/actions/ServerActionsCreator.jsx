@@ -10,19 +10,11 @@ export default {
       payload
     })
   },
-  submitResource(resource) {
+  addNewResource(resource) {
     console.log("submitting", resource);
 
     AppDispatcher.dispatch({
       actionType: Actions.SUBMIT_RESOURCE,
-      resource
-    })
-  },
-  addNewResource(resource) {
-    console.log(resource);
-
-    AppDispatcher.dispatch({
-      actionType: Actions.ADD_NEW_RESOURCE,
       resource
     })
   }
