@@ -3,10 +3,10 @@ import ServerActionsCreator from "./actions/ServerActionsCreator";
 export default {
   getAllResources() {
     $.get("/articles")
-    .success(data => {
+    .success(resources => {
       // create server action
-      console.log("need action now");
-      ServerActionsCreator.receiveResources
+      console.log("1. need action now");
+      ServerActionsCreator.receiveResources(resources)
     })
     .error(error => {
 
