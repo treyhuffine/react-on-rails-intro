@@ -4,14 +4,16 @@ import ResourceList from './ResourceList';
 export default class ArticleList extends React.Component {
   render() {
     return (
-      <div className="row">
-        <div className="card-panel hoverable">
+      <div className="container">
+        <div className="row">
+          <div className="card-panel hoverable">
 
-          <nav>
-            <SearchForm />
-          </nav>
-          <ResourceList />
+            <nav>
+              <SearchForm />
+            </nav>
+            <ResourceList />
 
+          </div>
         </div>
       </div>
     );
