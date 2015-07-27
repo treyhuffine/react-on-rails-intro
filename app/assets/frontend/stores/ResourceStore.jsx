@@ -3,8 +3,6 @@ import Actions from "../constants";
 import AppEventEmitter from "./AppEventEmitter";
 import API from "../API"
 
-// import { EventEmitter } from "events";
-
 let _resources = [];
 
 class ResourceEventEmitter extends AppEventEmitter {

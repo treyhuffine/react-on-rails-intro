@@ -14,7 +14,7 @@ export default {
     console.log("submitting", resource);
 
     AppDispatcher.dispatch({
-      actionType: Actions.SUBMIT_RESOURCE,
+      actionType: Actions.ADD_NEW_RESOURCE,
       resource
     })
   }
