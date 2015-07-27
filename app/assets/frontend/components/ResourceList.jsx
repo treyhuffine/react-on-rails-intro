@@ -23,7 +23,7 @@ export default class ResourceList extends React.Component {
   }
   render() {
     let resources = this.state.resources.map((resource, idx) => {
-      return <OneResource resource={resource} key={idx} />
+      return <OneResource resource={resource} key={idx} index={idx}/>
     })
     return (
         <ul className="collection">

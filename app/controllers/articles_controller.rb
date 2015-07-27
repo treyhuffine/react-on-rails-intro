@@ -9,6 +9,16 @@ class ArticlesController < ApplicationController
     render json: Article.all
   end
 
+  def destroy
+    article = Article.find(params[:id])
+    article.destroy
+
+    respond_to do |format|
+      msg = { :status => "ok", :message => "Success!", :html => "<b>...</b>" }
+      format.json  { render :json => msg }
+    end
+  end
+
   private
 
   def article_params

@@ -17,5 +17,13 @@ export default {
       actionType: Actions.ADD_NEW_RESOURCE,
       resource
     })
+  },
+  deleteResource(resourceIndex) {
+    console.log(resourceIndex);
+    console.log(Actions.DELETE_RESOURCE);
+    AppDispatcher.dispatch({
+      actionType: Actions.DELETE_RESOURCE,
+      resourceIndex
+    })
   }
 }

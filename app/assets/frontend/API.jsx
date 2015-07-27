@@ -9,7 +9,7 @@ export default {
       ServerActionsCreator.receiveResources(resources)
     })
     .error(error => {
-
+      console.log(error);
     })
   },
   postResource(data) {
@@ -21,5 +21,17 @@ export default {
     .error(error => {
       console.log(error);
     });
+  },
+  deleteResource(fullResource) {
+    $.ajax({
+      url: "/articles/" + fullResource.resource.id,
+      type: 'DELETE'
+    })
+    .success(deleteResource => {
+      ServerActionsCreator.deleteResource(fullResource.index)
+    })
+    .error(error => {
+      console.log(error);
+    })
   }
 }

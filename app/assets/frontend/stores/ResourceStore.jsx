@@ -27,6 +27,12 @@ AppDispatcher.register(action => {
       ResourceStore.emitChange();
       break;
 
+    case Actions.DELETE_RESOURCE:
+      console.log("deleting", action);
+      _resources.splice(action.resourceIndex, 1);
+      ResourceStore.emitChange();
+      break;
+
     default:
     // do nothing
   }

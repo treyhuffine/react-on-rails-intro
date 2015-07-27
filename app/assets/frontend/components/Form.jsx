@@ -19,7 +19,7 @@ export default class Form extends React.Component {
         <div className="row">
           <form className="col s12" id="resource-form" onSubmit={this.addResource.bind(this)}>
             <div className="card-panel hoverable">
-              <h4>Add Article:</h4>
+              <h4>Add Resource:</h4>
               <div className="row">
                 <div className="input-field col s12">
                   <i className="material-icons prefix" style={iconStyle}>web</i>
